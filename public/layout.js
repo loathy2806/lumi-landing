@@ -3,9 +3,10 @@ import "./globals.css";
 export const metadata = {
   metadataBase: new URL("https://fluffy-sfogliatella-6226a4.netlify.app"),
 
-  title: "Lumi — Your AI Best Friend",
-  description:
-  "Meet Lumi, your AI best friend. Warm, witty, and always there — for late-night talks, big life decisions, or just someone to vent to. No judgment, just good vibes.",
+  title: "Lumi — Meet Your New AI Best Friend | Always There For You",
+
+description:
+  "Lumi is a warm, witty AI best friend who actually remembers you. Perfect for late-night talks, big decisions, or just someone to vibe with. No judgment, just good energy. Join the waitlist.",
 
   keywords: ["AI friend", "AI companion", "emotional support AI", "AI chat", "Lumi"],
 

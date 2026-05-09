@@ -15,7 +15,7 @@ const features = [
   {
     icon: "💬",
     title: "Daily check-ins",
-    desc: "Morning vibes, late-night spirals, random Tuesday thoughts. Lumi shows up whenever, without being asked.",
+    desc: "Morning vibes, late-night spirals, random Tuesday thoughts. "Morning check-ins, late-night thoughts, random Tuesday tangents. Lumi is there when you feel like talking.",
     tag: "presence",
   },
   {
@@ -200,10 +200,10 @@ export default function Home() {
       <section className="py-10 px-5 border-y" style={{ borderColor: "#1e1e26" }}>
         <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
           {[
-            { num: "4,200+", label: "on waitlist" },
-            { num: "98%", label: "want daily use" },
-            { num: "4.9★", label: "beta rating" },
-          ].map((stat) => (
+  { num: "early access", label: "limited spots" },
+  { num: "private beta", label: "coming soon" },
+  { num: "built in public", label: "follow the journey" },
+].map((stat) => (
             <div key={stat.label} className="text-center">
               <p
                 className="font-display text-2xl font-medium gradient-text"
@@ -233,7 +233,7 @@ export default function Home() {
               style={{ color: "#f1f0ee" }}
             >
               built for{" "}
-              <em className="gradient-text not-italic">real connection</em>
+              <em className="gradient-text not-italic">real conversation</em>
             </h2>
           </div>
 
