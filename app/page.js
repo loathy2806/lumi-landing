@@ -15,7 +15,7 @@ const features = [
   {
     icon: "💬",
     title: "Daily check-ins",
-    desc: "Morning vibes, late-night spirals, random Tuesday thoughts. "Morning check-ins, late-night thoughts, random Tuesday tangents. Lumi is there when you feel like talking.",
+    desc: "Morning check-ins, late-night thoughts, random Tuesday tangents. Lumi is there when you feel like talking.",
     tag: "presence",
   },
   {
