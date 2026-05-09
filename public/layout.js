@@ -17,7 +17,7 @@ export const metadata = {
     siteName: "Lumi",
     images: [
   {
-    url: "https://fluffy-sfogliatella-6226a4.netlify.app/opengraph-image",
+    url: "/og-image.png",
     width: 1200,
     height: 630,
     alt: "Lumi — Your AI Best Friend",
