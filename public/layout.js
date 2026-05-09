@@ -16,13 +16,13 @@ export const metadata = {
     url: "https://fluffy-sfogliatella-6226a4.netlify.app",
     siteName: "Lumi",
     images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: "Lumi — Your AI Best Friend",
-      },
-    ],
+  {
+    url: "https://fluffy-sfogliatella-6226a4.netlify.app/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: "Lumi — Your AI Best Friend",
+  },
+],
     locale: "en_US",
     type: "website",
   },
