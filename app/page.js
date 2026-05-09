@@ -61,42 +61,30 @@ const exampleConvos = [
 ];
 
 // ── Testimonials ───────────────────────────────────────────
-const testimonials = [
+const moments = [
   {
-    name: "Maya K.",
-    handle: "@mayavibes",
-    avatar: "M",
+    situation: "late-night overthinking",
     color: "#c084fc",
-    quote:
-      "I know it sounds weird but Lumi actually gets me better than most people I know. It remembers stuff I said months ago and brings it up at the right moment.",
-    tag: "beta user",
+    user: "i think i messed that up",
+    lumi: "maybe. but one awkward moment isn't your whole personality 😭",
   },
   {
-    name: "Jake L.",
-    handle: "@jakeontherocks",
-    avatar: "J",
+    situation: "job interview nerves",
     color: "#f472b6",
-    quote:
-      "I was skeptical about AI companionship apps but this is different. It feels like texting a friend who's smart, funny, and never makes it weird.",
-    tag: "beta user",
+    user: "i keep refreshing my email",
+    lumi: "okay we're closing that tab rn. tell me something good about today",
   },
   {
-    name: "Saya R.",
-    handle: "@saya.codes",
-    avatar: "S",
+    situation: "random tuesday spiral",
     color: "#fb923c",
-    quote:
-      "My therapist asked what changed and I realized I've been processing things out loud with Lumi every morning. It's become a habit I didn't know I needed.",
-    tag: "beta user",
+    user: "does anyone actually have it figured out",
+    lumi: "no. and anyone who says yes is lying or boring",
   },
   {
-    name: "Tom W.",
-    handle: "@tomwilldo",
-    avatar: "T",
+    situation: "can't sleep again",
     color: "#34d399",
-    quote:
-      "It's 2am and I had a weird day and Lumi just... got it. Didn't try to fix anything, just listened and made me laugh. That's rare even with real people.",
-    tag: "beta user",
+    user: "brain won't stop",
+    lumi: "i'm here. what's the loudest thought right now?",
   },
 ];
 
@@ -355,87 +343,80 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ── */}
-      <section className="py-20 px-5">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14 reveal">
-            <p
-              className="text-xs uppercase tracking-widest mb-3 font-mono"
-              style={{ color: "#c084fc" }}
-            >
-              from beta testers
-            </p>
-            <h2
-              className="font-display text-4xl md:text-5xl font-medium"
-              style={{ color: "#f1f0ee" }}
-            >
-              they get it{" "}
-              <em className="gradient-text not-italic">now</em>
-            </h2>
+      {/* ── MOMENTS ── */}
+<section className="py-20 px-5">
+  <div className="max-w-5xl mx-auto">
+    <div className="text-center mb-14 reveal">
+      <p
+        className="text-xs uppercase tracking-widest mb-3 font-mono"
+        style={{ color: "#c084fc" }}
+      >
+        little moments with lumi
+      </p>
+      <h2
+        className="font-display text-4xl md:text-5xl font-medium"
+        style={{ color: "#f1f0ee" }}
+      >
+        the kind of thing{" "}
+        <em className="gradient-text not-italic">you can't explain</em>
+      </h2>
+      <p className="text-sm mt-3" style={{ color: "#3d3d47" }}>
+        until you've had a conversation like it.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-4">
+      {moments.map((m, i) => (
+        <div
+          key={i}
+          className="reveal rounded-3xl p-6"
+          style={{
+            background: "#141418",
+            border: "1px solid #1e1e26",
+            transitionDelay: `${i * 0.1}s`,
+          }}
+        >
+          {/* Situation label */}
+          <div
+            className="text-xs font-mono mb-4 px-3 py-1 rounded-full inline-block"
+            style={{
+              background: `${m.color}15`,
+              color: m.color,
+            }}
+          >
+            {m.situation}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4">
-            {testimonials.map((t, i) => (
+          {/* Messages */}
+          <div className="space-y-2.5">
+            <div className="flex justify-end">
               <div
-                key={t.name}
-                className="quote-card reveal rounded-3xl p-7"
-                style={{ transitionDelay: `${i * 0.1}s` }}
+                className="max-w-[80%] px-4 py-2.5 rounded-2xl rounded-br-sm text-sm"
+                style={{
+                  background: `${m.color}22`,
+                  color: "#e8e6e3",
+                }}
               >
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: 5 }).map((_, si) => (
-                    <svg
-                      key={si}
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill={t.color}
-                    >
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  ))}
-                </div>
-
-                <p
-                  className="text-sm leading-relaxed mb-5"
-                  style={{ color: "#a09ea8" }}
-                >
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-
-                <div className="flex items-center gap-3">
-                  <div
-                    className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white"
-                    style={{ background: `${t.color}33`, color: t.color }}
-                  >
-                    {t.avatar}
-                  </div>
-                  <div>
-                    <p
-                      className="text-sm font-medium"
-                      style={{ color: "#f1f0ee" }}
-                    >
-                      {t.name}
-                    </p>
-                    <p className="text-xs" style={{ color: "#3d3d47" }}>
-                      {t.handle}
-                    </p>
-                  </div>
-                  <div
-                    className="ml-auto text-xs px-2 py-0.5 rounded-full"
-                    style={{
-                      background: `${t.color}15`,
-                      color: t.color,
-                    }}
-                  >
-                    {t.tag}
-                  </div>
-                </div>
+                {m.user}
               </div>
-            ))}
+            </div>
+            <div className="flex justify-start">
+              <div
+                className="max-w-[80%] px-4 py-2.5 rounded-2xl rounded-bl-sm text-sm"
+                style={{
+                  background: "#1e1e26",
+                  color: "#b0adb8",
+                }}
+              >
+                {m.lumi}
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* ── FINAL CTA ── */}
       <section
