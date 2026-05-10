@@ -1,14 +1,12 @@
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
   metadataBase: new URL("https://fluffy-sfogliatella-6226a4.netlify.app"),
-
   title: "Lumi — Your AI Best Friend",
   description:
-  "Meet Lumi, your AI best friend. Warm, witty, and always there — for late-night talks, big life decisions, or just someone to vent to. No judgment, just good vibes.",
-
+    "Meet Lumi, your AI best friend. Warm, witty, and always there — for late-night talks, big life decisions, or just someone to vent to. No judgment, just good vibes.",
   keywords: ["AI friend", "AI companion", "emotional support AI", "AI chat", "Lumi"],
-
   openGraph: {
     title: "Lumi — Your AI Best Friend",
     description:
@@ -17,7 +15,7 @@ export const metadata = {
     siteName: "Lumi",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Lumi — Your AI Best Friend",
@@ -26,7 +24,6 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-
   robots: {
     index: true,
     follow: true,
@@ -36,7 +33,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="noise">{children}</body>
+      <body className="noise">
+        {children}
+        <GoogleAnalytics gaId="G-2HDLFF44LQ" />
+      </body>
     </html>
   );
 }
